@@ -79,7 +79,7 @@ function winLose () {
     else if(remainingGuesses === 0) {
         lossCounter++;
         document.getElementById('losses').innerHTML = lossCounter;
-        alert('Gameover');
+        alert("Game Over!");
         resetGame();
     }
 }
