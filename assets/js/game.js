@@ -11,9 +11,6 @@ var remainingGuesses = 10;
 var winCounter = 0;
 var lossCounter = 0
 var rightCount = 0;
-hasFinished = false
-
-
 
 function resetGame () {
 
