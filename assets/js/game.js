@@ -12,6 +12,7 @@ var winCounter = 0;
 var lossCounter = 0
 var rightCount = 0;
 
+//Reset game back to start/first page load
 function resetGame () {
 
     chosenBand = bands[Math.floor(Math.random() * bands.length)];
@@ -25,6 +26,7 @@ function resetGame () {
     startGame();
 }
 
+//Start the game, select a random band, convert letters to _
 function startGame() {
     chosenBand = bands[Math.floor(Math.random() * bands.length)];
     lettersInWord = chosenBand.split('');
@@ -39,13 +41,15 @@ function startGame() {
         blanksCorrectLetters.push('_');
         document.getElementById('bandToGuess').innerHTML = blanksCorrectLetters;
     }
-
+    
     document.getElementById('bandToGuess').innerHTML = blanksCorrectLetters.join(' ');
     document.getElementById('numGuess').innerHTML = remainingGuesses;
     document.getElementById('wins').innerHTML = winCounter;
     document.getElementById('losses').innerHTML = lossCounter;
     document.getElementById('wrongLetters').innerHTML = wrongLetters;
 }
+
+//Key press event tracking and compare to chosen band
     document.onkeyup = function(event) {
         userGuess = event.key
         if(chosenBand.indexOf(event.key) > -1) {
@@ -66,6 +70,7 @@ function startGame() {
     winLose();
 }
 
+//Determines when you win or lose
 function winLose () {
     if(rightCount === numberBlanks) {
         winCounter++;
