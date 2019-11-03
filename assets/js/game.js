@@ -1,6 +1,6 @@
 
 //Global arrays
-var bands = ["defleppard", "eagles", "journey", "rush", "styx", "foreigner", "aerosmith"];
+var bands = ["defleppard", "eagles", "journey", "rush", "styx", "foreigner", "aerosmith","ironmaiden", "bonjovi", "genesis", "blacksabbath", "metallica", "vanhalen"];
 var chosenBand = "";
 var lettersInWord = [];
 var numberBlanks = 0;
@@ -48,11 +48,6 @@ function startGame() {
     document.getElementById('wins').innerHTML = winCounter;
     document.getElementById('losses').innerHTML = lossCounter;
     document.getElementById('wrongLetters').innerHTML = wrongLetters;
-
-    console.log(chosenBand);
-    console.log(lettersInWord);
-    console.log(numberBlanks);
-    console.log(blanksCorrectLetters);
 }
     document.onkeyup = function(event) {
         userGuess = event.key
@@ -64,7 +59,6 @@ function startGame() {
                     document.getElementById('bandToGuess').innerHTML = blanksCorrectLetters.join(' ');
             }
         }
-        console.log(blanksCorrectLetters);
     }
     else {
         wrongLetters.push(event.key);
