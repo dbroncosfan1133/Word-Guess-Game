@@ -1,0 +1,39 @@
+body {
+    background-color: #190b1f;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+}
+
+h2,h3, {
+    padding: 5px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+#songGuess {
+    letter-spacing: 10px;
+}
+
+#tryAgain {
+    display: none;
+}
+
+
+
+.fontcol {
+    color: #ffffff;
+}
+
+.jumbotron {
+    background: url("../images/background1.jpg");
+    height: 450px;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+#alignhead {
+    margin-top: 500px;
+}
